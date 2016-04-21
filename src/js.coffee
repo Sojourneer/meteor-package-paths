@@ -38,12 +38,16 @@ module.exports =
         printFiles(tree.shared, ['client', 'server'])
         printFiles(tree.client, ['client'])
         printFiles(tree.server, ['server'])
-
-    print 'shared'
-    print 'server'
-    print 'client'
-    print 'images'
-    print 'private'
+	
+	fs.readdirSync(rootDir).forEach(function(dirFeature) {
+        dirFeature = rootDir+'/'+dirFeature;
+        
+		var stat = filesystem.statSync(dirFeature);
+        if (stat && stat.isDirectory()) {
+            print dirFeature
+        }
+    })
+	
 
     # Finish up.
     result
