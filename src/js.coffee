@@ -45,7 +45,11 @@ module.exports =
         
       stat = fs.statSync(dirFeature)
       if stat and stat.isDirectory()
-        print dirFeature
+        print dirFeature + '/client'
+        print dirFeature + '/server'
+        print dirFeature + '/shared'
+        print dirFeature + '/images'
+        print dirFeature + '/private'
 
     # Finish up.
     result
