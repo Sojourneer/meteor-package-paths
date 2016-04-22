@@ -41,11 +41,11 @@ module.exports =
 	
 	children = fs.readdirSync(rootDir)
 	for dirFeature in children
-		dirFeature = rootDir + '/' + dirFeature
+	  dirFeature = rootDir + '/' + dirFeature
         
-		stat = filesystem.statSync(dirFeature)
-        if stat and stat.isDirectory()
-            print dirFeature
+	  stat = filesystem.statSync(dirFeature)
+      if stat and stat.isDirectory()
+        print dirFeature
 
     # Finish up.
     result
