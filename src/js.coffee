@@ -32,7 +32,6 @@ module.exports =
         result += file.toAddFilesJavascript(rootDir, options)
 
     print = (dir) ->
-      dir = "#{ rootDir }/#{ dir }"
       if fs.existsSync(dir)
         tree = File.tree(dir)
         printFiles(tree.shared, ['client', 'server'])
@@ -42,7 +41,8 @@ module.exports =
     children = fs.readdirSync(rootDir)
     for dirFeature in children
       dirFeature = rootDir + '/' + dirFeature
-        
+      console.log(dirFeature)
+	  
       stat = fs.statSync(dirFeature)
       if stat and stat.isDirectory()
         print dirFeature + '/client'
