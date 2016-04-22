@@ -39,11 +39,11 @@ module.exports =
         printFiles(tree.client, ['client'])
         printFiles(tree.server, ['server'])
 	
-	children = fs.readdirSync(rootDir)
-	for dirFeature in children
-	  dirFeature = rootDir + '/' + dirFeature
+    children = fs.readdirSync(rootDir)
+    for dirFeature in children
+      dirFeature = rootDir + '/' + dirFeature
         
-	  stat = filesystem.statSync(dirFeature)
+      stat = filesystem.statSync(dirFeature)
       if stat and stat.isDirectory()
         print dirFeature
 
