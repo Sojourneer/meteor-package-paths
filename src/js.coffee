@@ -39,15 +39,13 @@ module.exports =
         printFiles(tree.client, ['client'])
         printFiles(tree.server, ['server'])
 	
-	fs.readdirSync(rootDir).forEach(function(dirFeature) {
-        dirFeature = rootDir+'/'+dirFeature;
+	children = fs.readdirSync(rootDir)
+	for dirFeature in children
+		dirFeature = rootDir + '/' + dirFeature
         
-		var stat = filesystem.statSync(dirFeature);
-        if (stat && stat.isDirectory()) {
+		stat = filesystem.statSync(dirFeature)
+        if stat and stat.isDirectory()
             print dirFeature
-        }
-    })
-	
 
     # Finish up.
     result
