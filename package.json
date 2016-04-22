@@ -19,6 +19,6 @@
     "url": "https://github.com/philcockfield/meteor-package-paths.git"
   },
   "bin": {
-    "package": "./bin/command.js"
+    "package1": "./bin/command.js"
   }
 }

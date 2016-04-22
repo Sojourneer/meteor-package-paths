@@ -43,7 +43,7 @@ module.exports =
     for dirFeature in children
       dirFeature = rootDir + '/' + dirFeature
         
-      stat = filesystem.statSync(dirFeature)
+      stat = fs.statSync(dirFeature)
       if stat and stat.isDirectory()
         print dirFeature
 
