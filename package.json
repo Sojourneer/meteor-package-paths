@@ -1,6 +1,6 @@
 {
   "name": "meteor-package-paths",
-  "version": "https://github.com/Sojourneer/meteor-package-paths/archive/master.zip",
+  "version": "0.44",
   "homepage": "https://github.com/philcockfield/meteor-package-paths",
   "engines": [
     "node >=0.10.33"
